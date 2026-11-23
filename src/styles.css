@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+
+.header{
+   color: rgba(247, 249, 250, 0.7);
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+  font-size: 14px;
+  
+  
+}
+
+.icon{
+     width: 24px;
+  height: 24px;
+  object-fit: contain;
+
+}
