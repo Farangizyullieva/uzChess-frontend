@@ -1,8 +1,12 @@
+import { useState } from "react";
 import IconAndText from "./IconAndText.tsx";
 
 function CourseHeader() {
+  const [isBought , setIsbought ] = useState(false)
+
     let rating = 4
     let ratingArray = Array.from({length : 5})
+   
 
   return <div className="flex flex-row justify-between w-full min-w-240 h-48.5 bg-black rounded-lg border-[#F7F9FA]/8 border p-8">
 
@@ -40,8 +44,12 @@ function CourseHeader() {
 
 
         <div>
-            <button className="h-12.5 px-10 rounded-lg bg-[#1C92E0] ">Kursni sotib olish</button>
-            <button className="w-12.5 h-12.5 rounded-lg items-center justify-center border border-white">
+          
+        
+            <button onClick={()=> setIsbought(!isBought)}  className={"h-12.5 px-10 rounded-lg bg-[#1C92E0]"}>{isBought ? 'Kurs sotib oldindi' : 'Kurs sotib olish'}</button>
+
+             {/* { isOpen && <div className="grid grid-cols-3 w-full gap-6 bg-[#F7F9FA]/3 p-5"> */}
+            <button className="w-12.5 h-12.5 rounded-lg items-center justify-center border border-white"> 
                 <img src="/heart (1).svg" alt="icon" />
             </button>
 
